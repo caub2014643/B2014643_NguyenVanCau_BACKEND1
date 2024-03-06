@@ -24,7 +24,6 @@ exports.findAll = async (req, res, next) => {
     return res.send(documents);
 };
 
-
  // Find a single contact with an id
 exports.findOne = async (req, res, next) => {
     try {
@@ -43,6 +42,7 @@ exports.findOne = async (req, res, next) => {
         );
     }
 };
+
 // Update a contact by the id in the request
 exports.update = async (req, res, next) => {
     if (Object.keys(req.body).length == 0) {
@@ -62,6 +62,7 @@ exports.update = async (req, res, next) => {
         );
     }   
 };
+
 // Delete all contacts of a user from the database
 exports.deleteAll = async (_req, res, next) => {
     try {
@@ -76,6 +77,7 @@ exports.deleteAll = async (_req, res, next) => {
         );
     }
 };
+
     // Delete a contact with the specified id in the request
 exports.delete = async (req, res, next) => {
     try {
@@ -94,6 +96,7 @@ exports.delete = async (req, res, next) => {
         );
     }
 };
+
 // Find all favorite contacts of a user
 exports.findAllFavorite = async (_req, res, next) => {
     try {
